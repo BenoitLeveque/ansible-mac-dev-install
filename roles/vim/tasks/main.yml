@@ -1,5 +1,5 @@
 ---
 - name: install
   homebrew: >
-    name=git
+    name=vim
     state=present

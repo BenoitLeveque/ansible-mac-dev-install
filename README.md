@@ -10,6 +10,7 @@ What will be installed
 
 - git
 - zsh with plugin for : git, sublimetext, composer, symfony2, history, history-substring-search
+- vim
 
 Installation
 ============

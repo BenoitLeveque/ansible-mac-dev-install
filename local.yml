@@ -3,6 +3,7 @@
   roles:
     - git
     - { role: zsh, plugins: "git sublime composer symfony2 history history-substring-search" }
+    - vim
 
   tasks:
     # configuration of git
@@ -14,3 +15,8 @@
       template: >
         src=templates/git/gitconfig.j2
         dest={{ ansible_env.HOME }}/.gitconfig
+    # configuration of vim
+    - name: .vimrc
+      template: >
+        src=templates/vim/vimrc.j2
+        dest={{ ansible_env.HOME }}/.vimrc
