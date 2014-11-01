@@ -2,6 +2,7 @@
 - hosts: localhost
   roles:
     - git
+    - { role: zsh, plugins: "git sublime composer symfony2 history history-substring-search" }
 
   tasks:
     # configuration of git
