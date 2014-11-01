@@ -5,6 +5,11 @@ Requirements
 - Homebrew
 - Ansible
 
+What will be installed
+======================
+
+- git
+
 Installation
 ============
 
