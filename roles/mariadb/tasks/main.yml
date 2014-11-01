@@ -4,11 +4,5 @@
     name=mariadb
     state=present
 
-- name: unset TMPDIR
-  shell: unset TMPDIR
-
-- name: mysql_install_db
-  shell: mysql_install_db
-
 - name: mysql.server start
   shell: mysql.server start
