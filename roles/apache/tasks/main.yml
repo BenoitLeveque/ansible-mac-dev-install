@@ -1,0 +1,37 @@
+---
+- name: enable apache vhost module
+  lineinfile: >
+    dest=/etc/apache2/httpd.conf
+    regexp='^LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so'
+    insertafter='#LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so'
+    line='LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so'
+    state=present
+  sudo: yes
+  notify:
+   - restart apache
+
+- name: include vhost config file
+  lineinfile: >
+    dest=/etc/apache2/httpd.conf
+    regexp='^Include /private/etc/apache2/extra/httpd-vhosts.conf'
+    insertafter='#Include /private/etc/apache2/extra/httpd-vhosts.conf'
+    line='Include /private/etc/apache2/extra/httpd-vhosts.conf'
+    state=present
+  sudo: yes
+  notify:
+   - restart apache
+
+- name: enable apache rewrite module
+  lineinfile: >
+    dest=/etc/apache2/httpd.conf
+    regexp='^LoadModule rewrite_module libexec/apache2/mod_rewrite.so'
+    insertafter='#LoadModule rewrite_module libexec/apache2/mod_rewrite.so'
+    line='LoadModule rewrite_module libexec/apache2/mod_rewrite.so'
+    state=present
+  sudo: yes
+  notify:
+   - restart apache
+
+- name: add current user to apache group
+  shell: dseditgroup -o edit -a `whoami` -t user _www
+  sudo: yes
