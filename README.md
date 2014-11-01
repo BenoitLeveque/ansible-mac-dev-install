@@ -9,8 +9,27 @@ What will be installed
 ======================
 
 - git
-- zsh with plugin for : git, sublimetext, composer, symfony2, history, history-substring-search
+- zsh
 - vim
+
+What will be configured
+=======================
+
+# Git
+
+- config
+- global ignore
+
+# ZSH
+
+add some plugins:
+
+- git
+- sublime
+- composer
+- symfony2
+- history
+- history-substring-search
 
 Installation
 ============
