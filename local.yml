@@ -4,6 +4,7 @@
     - git
     - { role: zsh, plugins: "git sublime composer symfony2 history history-substring-search" }
     - vim
+    - php
 
   tasks:
     # configuration of git

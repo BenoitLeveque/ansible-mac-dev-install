@@ -11,6 +11,7 @@ What will be installed
 - git
 - zsh
 - vim
+- PHP 5.6 with xdebug
 
 What will be configured
 =======================

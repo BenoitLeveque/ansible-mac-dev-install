@@ -1,0 +1,18 @@
+[PHP]
+memory_limit = 1024M
+
+post_max_size = 128M
+upload_max_filesize = 128M
+
+[Date]
+date.timezone = "Europe/Paris"
+
+[xdebug]
+xdebug.max_nesting_level=300
+xdebug.remote_enable=on
+xdebug.remote_handler=dbgp
+xdebug.remote_host=localhost
+xdebug.remote_port=9000
+
+[opcache]
+zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20131226/opcache.so
