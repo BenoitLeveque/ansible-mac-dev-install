@@ -6,6 +6,7 @@
     - vim
     - php
     - apache
+    - mariadb
 
   tasks:
     # configuration of git
