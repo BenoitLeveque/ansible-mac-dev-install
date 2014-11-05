@@ -1,3 +1,5 @@
+WARNING : this project is not ready to use and can break your mac
+
 Requirements
 ============
 
